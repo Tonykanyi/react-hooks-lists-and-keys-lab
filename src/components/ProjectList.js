@@ -1,14 +1,26 @@
-import React from "react";
-import ProjectItem from "./ProjectItem";
+import React from "react";  
+import ProjectList from "./ProjectList"; // Adjust the path according to your structure  
 
-function ProjectList({ projects }) {
-  console.log(projects);
-  return (
-    <div id="projects">
-      <h2>My Projects</h2>
-      <div id="project-list">{/* render ProjectItem components here */}</div>
-    </div>
-  );
-}
+const projectsData = [  
+  {  
+    name: "Project One",  
+    about: "This is a brief about Project One.",  
+    technologies: ["React", "Node.js", "Express"],  
+  },  
+  {  
+    name: "Project Two",  
+    about: "This is a brief about Project Two.",  
+    technologies: ["HTML", "CSS", "JavaScript"],  
+  },  
 
-export default ProjectList;
+];  
+
+function App() {  
+  return (  
+    <div>  
+      <ProjectList projects={projectsData} />  
+    </div>  
+  );  
+}  
+
+export default App;
